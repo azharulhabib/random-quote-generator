@@ -7,6 +7,7 @@ import getQuotes from './getQuotes';
 function App() {
   const [quote, setQuote] = useState('');
   const [author, setAuthor] = useState('');
+  const [key, setKey] = useState(0);
 
   const handleClick = async () => {
     try {
@@ -14,6 +15,7 @@ function App() {
 
       setQuote(data[0].quote);
       setAuthor(data[0].author);
+      setKey(prev => prev + 1);
     } catch (error) {
       console.error("Error fetching quote:", error);
     }
@@ -25,7 +27,7 @@ function App() {
       <Typography variant='h2'>Random Quote Generator</Typography>
       <Card className='card'>
         <CardContent>
-          <Typography variant='h5'>{quote}</Typography>
+          <Typography key={key} variant='h5'>{quote}</Typography>
           <Typography className='margin-top' color='textSecondary'>{author}</Typography>
           <hr/>
           <button className='margin-top' color='primary' variant='outlined' onClick={handleClick}>Click for quotes</button>
