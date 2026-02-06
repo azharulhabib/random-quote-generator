@@ -1,0 +1,64 @@
+.app {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card Styling */
+.card {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Quote text */
+.card h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Author text */
+.margin-top {
+  margin-top: 12px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Divider */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 20px 0;
+}
+
+/* Button Styling */
+button {
+  margin-top: 10px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
